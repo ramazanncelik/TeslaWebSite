@@ -18,7 +18,6 @@ const SelectCar = () => {
     useEffect(() => {
         if (selectionModel) {
             const model = teslaModels.find(model => { return model.id === parseInt(selectionModel) });
-            console.log(model)
             setModelData(model);
         } else {
             setModelData(null)
