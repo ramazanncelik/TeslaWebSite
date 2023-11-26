@@ -46,31 +46,31 @@ const DesignContainer = ({ modelData, setModelData, setOrderData }) => {
 
                 <div className='w-full h-max flex flex-row space-x-12 items-center justify-center'>
                     <div className='flex flex-col space-y-2 items-center justify-center'>
-                        <span className='text-xl font-semibold'>
+                        <span className='text-xl font-semibold text-center'>
                             {modelData.range} mil
                         </span>
 
-                        <span className='text-sm text-gray-500'>
+                        <span className='text-sm text-gray-500 text-center'>
                             Menzil (tahmini)
                         </span>
                     </div>
 
                     <div className='flex flex-col space-y-2 items-center justify-center'>
-                        <span className='text-xl font-semibold'>
+                        <span className='text-xl font-semibold text-center'>
                             {modelData.topSpeed} mil/saat
                         </span>
 
-                        <span className='text-sm text-gray-500'>
+                        <span className='text-sm text-gray-500 text-center'>
                             Azami Hız
                         </span>
                     </div>
 
                     <div className='flex flex-col space-y-2 items-center justify-center'>
-                        <span className='text-xl font-semibold'>
+                        <span className='text-xl font-semibold text-center'>
                             {modelData.milS} saniye
                         </span>
 
-                        <span className='text-sm text-gray-500'>
+                        <span className='text-sm text-gray-500 text-center'>
                             0-60 mil/s
                         </span>
                     </div>
