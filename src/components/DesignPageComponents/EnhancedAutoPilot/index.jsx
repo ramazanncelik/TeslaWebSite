@@ -60,7 +60,7 @@ const EnhancedAutoPilot = ({ modelData, setModelData, enhancedAutoPilotInfo, ful
         <div className='w-full h-max flex flex-col items-center justify-center space-y-2'>
             <div className="w-full h-max flex flex-col items-center justify-center space-y-2 mb-12 relative">
                 <div className="w-max h-full absolute left-0 flex items-center">
-                    <FaArrowLeft onClick={() => changeVideoIndex("-")} className="p-1 rounded-full bg-gray-100 hover:bg-gray-200 cursor-pointer z-10" size={24} />
+                    <FaArrowLeft onClick={() => changeVideoIndex("-")} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 cursor-pointer z-10" size={28} />
                 </div>
 
                 <ReactPlayer onEnded={() => changeVideoIndex("+")} style={{ maxWidth: '100%' }} playing url={enhancedAutoPilotInfo.videos[currentVideoIndex].videoUrl} />
@@ -70,7 +70,7 @@ const EnhancedAutoPilot = ({ modelData, setModelData, enhancedAutoPilotInfo, ful
                 </p>
 
                 <div className="w-max h-full absolute right-0 flex items-center">
-                    <FaArrowRight onClick={() => changeVideoIndex("+")} className="p-1 rounded-full bg-gray-100 hover:bg-gray-200 cursor-pointer z-10" size={24} />
+                    <FaArrowRight onClick={() => changeVideoIndex("+")} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 cursor-pointer z-10" size={28} />
                 </div>
             </div>
 

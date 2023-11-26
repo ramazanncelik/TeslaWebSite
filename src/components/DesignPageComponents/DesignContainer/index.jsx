@@ -45,7 +45,7 @@ const DesignContainer = ({ modelData, setModelData, setOrderData }) => {
                 </div>
 
                 <div className='w-full h-max flex flex-row space-x-12 items-center justify-center'>
-                    <div className='flex flex-col space-y-2 items-center'>
+                    <div className='flex flex-col space-y-2 items-center justify-center'>
                         <span className='text-xl font-semibold'>
                             {modelData.range} mil
                         </span>
@@ -55,7 +55,7 @@ const DesignContainer = ({ modelData, setModelData, setOrderData }) => {
                         </span>
                     </div>
 
-                    <div className='flex flex-col space-y-2 items-center'>
+                    <div className='flex flex-col space-y-2 items-center justify-center'>
                         <span className='text-xl font-semibold'>
                             {modelData.topSpeed} mil/saat
                         </span>
@@ -65,7 +65,7 @@ const DesignContainer = ({ modelData, setModelData, setOrderData }) => {
                         </span>
                     </div>
 
-                    <div className='flex flex-col space-y-2 items-center'>
+                    <div className='flex flex-col space-y-2 items-center justify-center'>
                         <span className='text-xl font-semibold'>
                             {modelData.milS} saniye
                         </span>
