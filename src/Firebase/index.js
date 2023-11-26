@@ -33,7 +33,7 @@ export async function login(email, password) {
     const { user } = await signInWithEmailAndPassword(auth, email, password);
     return user;
   } catch (error) {
-    toast.error(error.message)
+    toast.error(error.message);
   }
 }
 

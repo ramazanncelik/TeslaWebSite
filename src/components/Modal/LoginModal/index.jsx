@@ -24,6 +24,7 @@ const LoginModal = ({ close }) => {
             const user = await login(values.Email, values.Password);
 
             if (user) {
+                console.log(user)
                 await setUserData({
                     id: user.uid,
                     email: user.email

@@ -2,14 +2,17 @@ import { useState } from 'react'
 import { paymentValidations } from '../../../utils/validations';
 import { MdClose } from 'react-icons/md';
 import { useFormik } from 'formik';
-import { completePayment } from '../../../Firebase';
+import { completePayment, firestoreDatabase } from '../../../Firebase';
 import { useUserAtom } from '../../../jotai/user';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { collection, getDocs, where } from 'firebase/firestore';
+import { useOrderAtom } from '../../../jotai/order';
 
 const PaymentModal = ({ close, data }) => {
 
     const { userState } = useUserAtom();
+    const { setOrderData } = useOrderAtom();
     const [expiryDate, setExpiryDate] = useState("");
     const [isClicked, setIsClicked] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -43,6 +46,7 @@ const PaymentModal = ({ close, data }) => {
                 });
                 if (result) {
                     await toast.success("Ödeme Başarılı Bir Şekilde Yapıldı.");
+                    await getOrders(userState.id);
                     await navigate("/");
                     await close();
                     await handleReset();
@@ -55,6 +59,14 @@ const PaymentModal = ({ close, data }) => {
         },
         validationSchema: paymentValidations
     });
+
+    const getOrders = async (uid) => {
+        const querySnapshot = await getDocs(collection(firestoreDatabase, 'orders'), where('UserId', '==', uid));
+        const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        await setOrderData({
+            orders: [...data]
+        });
+    }
 
     const handleExpiryDateChange = (text) => {
         if (expiryDate.length === 2) {
