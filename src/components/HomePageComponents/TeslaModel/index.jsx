@@ -11,7 +11,7 @@ const TeslaModel = ({ teslaModel }) => {
 
         <div className='absolute inset-0 flex flex-col items-center justify-center'>
 
-          <div className={"px-4 py-2 rounded-lg text-white text-4xl font-semibold absolute top-0 mt-32 select-none"}>
+          <div className={"px-4 py-2 rounded-lg text-white text-3xl font-semibold absolute top-0 mt-[5%] select-none"}>
             {teslaModel.name}
           </div>
 
@@ -34,7 +34,7 @@ const TeslaModel = ({ teslaModel }) => {
 
         <div className='absolute inset-0 flex flex-col items-center justify-center'>
 
-          <div className={"px-4 py-2 rounded-lg text-black text-4xl font-semibold absolute top-0 mt-32 select-none"}>
+          <div className={"px-4 py-2 rounded-lg text-black text-3xl font-semibold absolute top-0 mt-[2%] select-none"}>
             {teslaModel.name}
           </div>
 
